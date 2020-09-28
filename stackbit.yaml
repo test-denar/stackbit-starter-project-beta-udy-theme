@@ -1,0 +1,156 @@
+stackbitVersion: "~0.3.0"
+ssgName: "custom"
+buildCommand: "npx @11ty/eleventy"
+publishDir: "public"
+staticDir: "static"
+uploadDir: "images"
+pagesDir: "site"
+metadata:
+  title: "stackbit starter project beta"
+  description: "Theme created in Webflow and converted with Udesly"
+models:
+  post:
+    type: "page"
+    label: "Blog Posts"
+    folder: "post"
+    match:
+      - "**/*"
+    fields:
+      - type: "markdown"
+        label: "Post Body"
+        name: "post-body"
+        required: false
+        description: ""
+      - type: "text"
+        label: "Post Summary"
+        name: "post-summary"
+        required: false
+        description: "A summary of the blog post that appears on blog post grid"
+      - type: "object"
+        label: "Main Image"
+        name: "main-image"
+        required: false
+        description: ""
+        fields:
+          - type: "image"
+            name: "url"
+            label: "Image"
+          - type: "string"
+            name: "alt"
+            label: "Alt Text"
+      - type: "object"
+        label: "Thumbnail image"
+        name: "thumbnail-image"
+        required: false
+        description: "Smaller version of main image that is used on blog post grid"
+        fields:
+          - type: "image"
+            name: "url"
+            label: "Image"
+          - type: "string"
+            name: "alt"
+            label: "Alt Text"
+      - type: "boolean"
+        label: "Featured?"
+        name: "featured"
+        required: false
+        description: ""
+      - type: "color"
+        label: "Color"
+        name: "color"
+        required: false
+        description: ""
+      - type: "string"
+        label: "Name"
+        name: "name"
+        required: true
+        description: ""
+      - type: "slug"
+        label: "Slug"
+        name: "slug"
+        required: true
+        description: ""
+      - type: "boolean"
+        label: "Archived"
+        name: "_archived"
+        required: true
+        description: ""
+      - type: "boolean"
+        label: "Draft"
+        name: "_draft"
+        required: true
+        description: ""
+      - type: "datetime"
+        label: "Created On"
+        name: "created-on"
+        required: false
+        description: ""
+      - type: "datetime"
+        label: "Updated On"
+        name: "updated-on"
+        required: false
+        description: ""
+      - type: "datetime"
+        label: "Published On"
+        name: "published-on"
+        required: false
+        description: ""
+  sections:
+    type: "page"
+    label: "Sections"
+    folder: "sections"
+    match:
+      - "**/*"
+    fields:
+      - type: "text"
+        label: "description"
+        name: "description"
+        required: false
+        description: ""
+      - type: "object"
+        label: "image"
+        name: "image"
+        required: false
+        description: ""
+        fields:
+          - type: "image"
+            name: "url"
+            label: "Image"
+          - type: "string"
+            name: "alt"
+            label: "Alt Text"
+      - type: "string"
+        label: "Name"
+        name: "name"
+        required: true
+        description: ""
+      - type: "slug"
+        label: "Slug"
+        name: "slug"
+        required: true
+        description: ""
+      - type: "boolean"
+        label: "Archived"
+        name: "_archived"
+        required: true
+        description: ""
+      - type: "boolean"
+        label: "Draft"
+        name: "_draft"
+        required: true
+        description: ""
+      - type: "datetime"
+        label: "Created On"
+        name: "created-on"
+        required: false
+        description: ""
+      - type: "datetime"
+        label: "Updated On"
+        name: "updated-on"
+        required: false
+        description: ""
+      - type: "datetime"
+        label: "Published On"
+        name: "published-on"
+        required: false
+        description: ""
